@@ -50,8 +50,9 @@ public class LeadServiceAPIEncharge implements LeadServiceAPI {
         headers.setContentType(MediaType.APPLICATION_JSON);
         MultiValueMap<String, String> map= new LinkedMultiValueMap<>();
         map.add("email", email);
-        map.add("name", name);
+        map.add("firstName", name);
         map.add("phone", phone);
+        map.add("tags", tags);
         HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(map, headers);
         ResponseEntity<String> response = restTemplate.postForEntity(URL, request , String.class);
         System.out.println("leadSavedOnAPI: " + response);
