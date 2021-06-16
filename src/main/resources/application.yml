@@ -1,0 +1,13 @@
+
+### abcriativa Certificate config
+server:
+  port: 8443 #the port on which the server is listening
+  ssl:
+    key-alias: 1 #the alias that identifies the key in the key store.
+    key-store: classpath:truststore-abcriativa_com_br.p12 #the path to the key store that contains the SSL certificate. In our example, we want Spring Boot to look for it in the classpath.
+    key-store-password: PaiEterno! #the password used to access the key store.
+    key-password: PaiEterno! #the password used to access the key in the key store.
+    key-store-type: pkcs12 #the type of the key store (JKS or PKCS12).
+    #trust-store: path/to/trust-store
+    #trust-store-password: yourTrustStorePassword
+
